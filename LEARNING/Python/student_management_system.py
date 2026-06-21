@@ -1,3 +1,4 @@
+student=[]
 while True:
     print("\n--- Student Management System ---")
     print("1. Add Student")
@@ -8,16 +9,19 @@ while True:
     choice = input("Enter your choice: ")
 
     if choice == "1":
-        print("Add Student selected")
+        stud=input("Enter student name: ")
+        student.append(stud)
     
     elif choice == "2":
-        print("View Students selected")
+        for i in range(1,len(student)+1):
+            print(i,". ",student[i-1])
     
     elif choice == "3":
         print("Exiting program...")
         break
     elif choice == "4":
-    print("Delete Student selected")
+        stud=input("Enter student name to remove: ")
+        student.remove(stud)
     
     else:
         print("Invalid choice, try again")
